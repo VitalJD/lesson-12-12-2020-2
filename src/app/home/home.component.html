@@ -1,0 +1,6 @@
+<div class="container">
+    <button class="btn" (click)="runClick()">Посмотреть данные</button>
+    <div class="card" *ngFor="let post of posts | async">
+        <span [class.completed]="post.title" >{{ post.title | titlecase }}</span>
+    </div>    
+</div>
